@@ -1,0 +1,11 @@
+{
+	"name": "ls_keyvaultconnection",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://covidreportdev-kv.vault.azure.net/"
+		}
+	}
+}
