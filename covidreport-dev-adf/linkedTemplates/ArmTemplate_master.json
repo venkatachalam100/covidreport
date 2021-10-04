@@ -7,13 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "covidreport-dev-adf"
 		},
+		"ls_blobconnection_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "secret-dev"
+		},
 		"ls_keyvaultconnection_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://covidreportdev-kv.vault.azure.net/"
-		},
-		"ls_blobconnection_properties_typeProperties_connectionString_secretName": {
-			"type": "string",
-			"defaultValue": "blobconnection"
 		},
 		"containerUri": {
 			"type": "string",

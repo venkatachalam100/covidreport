@@ -13,7 +13,7 @@
 		},
 		"ls_blobconnection_properties_typeProperties_connectionString_secretName": {
 			"type": "string",
-			"defaultValue": "blobconnection"
+			"defaultValue": "secret-dev"
 		}
 	},
 	"variables": {
@@ -119,7 +119,14 @@
 					{
 						"name": "blob to blob",
 						"type": "Copy",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "validate if file exists",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "7.00:00:00",
 							"retry": 0,
@@ -175,6 +182,21 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "validate if file exists",
+						"type": "Validation",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"dataset": {
+								"referenceName": "ds_input",
+								"type": "DatasetReference",
+								"parameters": {}
+							},
+							"timeout": "7.00:00:00",
+							"sleep": 10
+						}
 					}
 				],
 				"policy": {
