@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "covidreport-dev-adf"
+		},
+		"ls_keyvaultconnection_properties_typeProperties_baseUrl": {
+			"value": "https://covidreportdev-kv.vault.azure.net/"
+		},
+		"ls_blobconnection_properties_typeProperties_connectionString_secretName": {
+			"value": "blobconnection"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
